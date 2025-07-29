@@ -1,0 +1,195 @@
+main header {
+  display: flex;
+  
+}
+
+img {
+  width: 20px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+.modal {
+  width: 80px;
+  height: 100px;
+  background-color: #f5f5dc;
+}
+main .cards {
+  display: flex;
+  color: #2f1b14;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+main .cards .card {
+  margin: 0 auto;
+  background-color: #f5f5dc;
+  padding: 30px 40px;
+  width: 600px;
+  border-radius: 7px;
+  margin-top: 40px;
+}
+
+.cards .card header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.card header h2 {
+  font-family: Noto Sans;
+  font-weight: 700;
+  color: #8b4513;
+  font-size: 1.7rem;
+}
+.bookInfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bookBlock,
+.priceBlock {
+  background-color: #8b4513;
+  color: #f5f5dc;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 45%;
+  min-width: 200px;
+  flex: 1;
+  box-sizing: border-box;
+}
+.line {
+  background-color: #a0522d;
+  height: 2px;
+}
+p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+
+  max-width: 500px;
+  font-family: Noto Sans;
+  font-weight: 500;
+  color: #2f1b14;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.btns button {
+  color: #f5f5dc;
+  font-size: 1.3rem;
+  border: 0;
+  border-radius: 10px;
+  font-family: Heebo;
+  font-weight: 700;
+
+  cursor: pointer;
+  padding: 5px 40px;
+}
+.btnEdit button {
+  background-color: #8b4513;
+}
+.btnReadMore button {
+  background-color: #a0522d;
+}
+.btnDelete button {
+  background-color: #deb887;
+}
+.loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  main .cards .card {
+    width: 90%;
+    padding: 25px 30px;
+  }
+
+  .card header h2 {
+    font-size: 1.5rem;
+  }
+
+  .btns {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btns button {
+    flex: 1;
+    min-width: 120px;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  img {
+    margin-left: 20px;
+    width: 18px;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .bookInfo {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bookBlock,
+  .priceBlock {
+    max-width: 100%;
+  }
+
+  .card header h2 {
+    font-size: 1.4rem;
+  }
+
+  .btns button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  main .cards .card {
+    padding: 20px;
+  }
+
+  .card header h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btns button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  img {
+    width: 16px;
+    margin-left: 10px;
+  }
+}

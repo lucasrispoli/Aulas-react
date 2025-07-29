@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #8b4513;
+  --primary-hover: #a0522d;
+  --text-color: #2f1b14;
+  --error-color: #c00;
+  --border-radius: 10px;
+  --bg-color: #deb887;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex: 1;
+  min-height: calc(100vh - 120px); 
+  margin-top: 60px; 
+  margin-bottom: 60px; 
+}
+
+.tableBox {
+  flex: 0 0 auto;
+  max-width: 300px;
+  min-width: 250px;
+}
+
+.formWrapper {
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 20px;
+  background: #f5f5dc;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #d2b48c;
+  box-shadow: 0 4px 14px rgba(143, 19, 19, 0.1);
+}
+
+.formWrapper h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.field input,
+.field select {
+  padding: 0.75rem;
+  border: 1px solid #8b4513;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.field span {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.actions button {
+  background-color: var(--primary-color);
+  color: #f5f5dc;
+  padding: 0.75rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; 
+    margin-bottom: 120px; 
+    padding: 1rem;
+    min-height: calc(100vh - 200px); 
+  }
+
+  .formWrapper {
+    width: 90%;
+    padding: 1.5rem;
+    margin: 10px 0; 
+  }
+
+  .tableBox {
+    max-width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .actions button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+
+  .formWrapper {
+    width: 80%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin-top: 90px;
+    margin-bottom: 140px; 
+    padding: 0.5rem;
+    min-height: calc(100vh - 230px); 
+  }
+
+  .formWrapper {
+    width: 95%;
+    padding: 1.2rem;
+    margin: 5px 0;
+  }
+
+  .formWrapper h2 {
+    font-size: 1.4rem;
+  }
+
+  .field input,
+  .field select {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .actions button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+}

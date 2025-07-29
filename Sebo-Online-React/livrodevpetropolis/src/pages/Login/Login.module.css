@@ -1,0 +1,287 @@
+/* Container principal */
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #deb887 0%, #a0522d 50%, #8b4513 100%);
+  padding: 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Cards container */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+/* Card de login */
+.loginCard {
+  margin: 0 auto;
+  background-color: #f5f5dc;
+  padding: 30px 40px;
+  width: 600px;
+  border-radius: 7px;
+  margin-top: 40px;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-direction: column;
+}
+
+.header h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  color: #8b4513;
+  font-size: 1.7rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.header p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  max-width: 500px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  color: #2f1b14;
+}
+
+/* Linha separadora */
+.line {
+  background-color: #a0522d;
+  height: 2px;
+  margin: 15px 0 20px 0;
+}
+
+/* Container do formulário */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Grupo de input */
+.inputGroup {
+  position: relative;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #8b4513;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f5f5dc;
+  color: #2f1b14;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #a0522d;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
+}
+
+.input:disabled {
+  background: #deb887;
+  color: #2f1b14;
+  cursor: not-allowed;
+}
+
+.input::placeholder {
+  color: #8b4513;
+  font-weight: 400;
+}
+
+/* Botão de login */
+.loginBtn {
+  color: #f5f5dc;
+  font-size: 1.3rem;
+  border: 0;
+  border-radius: 10px;
+  font-family: "Heebo", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px 40px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.loginBtn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+  transform: translateY(-2px);
+}
+
+.loginBtn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.loginBtn:disabled {
+  background: #deb887;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Alert de erro */
+.errorAlert {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #feb2b2;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* Footer */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 4px 0;
+  font-size: 1rem;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  color: #2f1b14;
+}
+
+.footer p:first-child {
+  font-weight: 600;
+  color: #8b4513;
+}
+
+/* Loading */
+.loading {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #deb887 0%, #a0522d 50%, #8b4513 100%);
+}
+
+/* Responsividade */
+@media (max-width: 680px) {
+  .loginCard {
+    width: 90%;
+    padding: 25px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .loginCard {
+    width: 100%;
+    padding: 20px 25px;
+    margin-top: 20px;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .input {
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+
+  .loginBtn {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .loginCard {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .header h2 {
+    font-size: 1.6rem;
+  }
+
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .loginBtn {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .loginCard {
+    width: 90%;
+    padding: 25px 30px;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+    align-items: stretch;
+  }
+
+  .loginCard {
+    width: 100%;
+    padding: 20px 20px;
+    margin-top: 20px;
+  }
+
+  .header h2 {
+    font-size: 1.4rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  .loginBtn {
+    padding: 10px 25px;
+    font-size: 1.1rem;
+  }
+
+  .footer p {
+    font-size: 0.95rem;
+  }
+}
